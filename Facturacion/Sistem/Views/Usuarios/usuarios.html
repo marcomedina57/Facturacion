@@ -1,0 +1,173 @@
+<div class="container2">
+    
+        
+    
+
+    <div class="row rowin">
+        <h3>Usuarios</h3>
+        <div class="input-field col s0">
+            <a onclick ="restablecerUser();"href="#modal1" class="waves-effect waves-light btn modal-trigger">
+                Registrar
+            </a>
+        </div>
+        <div class="input-field col s6">
+            <input placeholder = "buscar usuario" id= "filtrarUser" onKeyUp = "getUsers(1);" type="text">
+            <label for="filtrar">Buscar usuario</label>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NID</th>
+                    <th>Nombre</th>
+                    <th>Usuario</th>    
+                    <th>Roles</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody id="resultUser"></tbody>
+        </table>
+        <div id="paginador">
+
+        </div>
+        <!-- Modal-->
+        <div id="modal1" class="modal modal-fixed-footer">
+           <form action="" method = "POST" class="col s12" id="validate" enctype="multipart/form-data">
+            <div class="modal-content">
+                <center>
+                <h5>Registrar Usuarios</h5>
+            </center>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-content white-text">
+                        <center>
+                        <span class="card-title blue-grey-text">
+                            Foto o imagen
+                        </span>
+                        <output id="fotos"></output>
+                    </center>
+                    </div>
+                    <div class="card-action">
+                        <center>
+                            <a href="">
+                                    <div class="file-field input-field">
+                                        <div class="btn waves-effect waves-light">
+                                            <span>Subir</span>
+                                            <input accept="image/*" type = "file" id = "files" name = "files">
+                                            <div class="file-path-wrapper">
+                                                <input type="text" class="file-path">
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </form>
+                            </a>
+                            <a href=""> Foto o imagen</a>
+                        </center>
+                    </div>
+                </div>
+                
+              </div>
+           
+              <div class="row">
+                
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type = "text" placeholder = "Nombre"  required class = "validate" type="text" id="nombre" name = "nombre">
+                            <label for="nombre">Nombre
+
+                            </label>
+
+                        </div>
+                                <div class="input-field col s6">
+                                <input type = "text" placeholder = "Apellido"  required class = "validate" type="text" id="apellido" name = "apellido">
+                                <label class = "error" for="apellido">Apellido
+    
+                                </label>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type = "text" placeholder = "NID"  required class = "validate" type="text" id="nid" name = "nid">
+                                <label class = "error" for="nid">NID
+    
+                                </label>
+    
+                            </div> 
+
+                            <div class="input-field col s6">
+                                <input type = "text" placeholder = "No. Telefono"  required class = "validate" type="number" id="telefono" name = "telefono">
+                                <label class = "error" for="telefono">Telefono
+    
+                                </label>
+    
+                            </div> 
+
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type = "email" placeholder = "Email"  required class = "validate" type="email" id="email" name = "email">
+                                <label class = "error" for="email">Email
+    
+                                </label>
+    
+                            </div> 
+
+                            <div class="input-field col s6">
+                                <input type = "text"  minlength = "6" maxlength = "20" name = "password" placeholder = "Password"  required class = "validate" type="password" id="password">
+                                <label class = "error" for="password">Contraseña
+    
+                                </label>
+    
+                            </div> 
+
+                        </div>
+                         <div class="row">
+                            <div class="input-field col s6">
+                                <input type = "text" minlength = "6" maxlength = "20" name = "usuario" placeholder = "Usuario"  required class = "validate" type="text" id="usuario">
+                                <label class = "error" for="usuario">Usuario
+    
+                                </label>
+    
+                            </div> 
+                            <div class="input-field col s12">
+                                <select name="" id="roles">
+                                    
+                                </select>
+                                <label for=""> Tipo de Roles</label>
+                            </div> 
+
+                         
+
+                        </div>
+
+            </div>
+            </div>
+            <div class="modal-footer">
+                <label for="" id="registerMessage" class="text-left Message">
+                    
+                </label>
+                <button id="registerClose" class="waves-effect waves-light btn">Cancelar</button>
+                <button onclick = "" id = "registerUser" class = "waves-effect waves-light btn">
+                    Registra
+                </button>
+            </div>
+         </form>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4>Esta seguro de eliminar el usuario</h4>
+                <p id="userName"></p>
+            </div>
+            <div class="modal-footer">
+                <label for="" id="deleteUserMessage" class="text-left Message"></label>
+                <a href="#!" modal = "modal-close waves-effect waves-green btn-flat">
+                    Cancelar
+                </a>
+                <a href="#!" id = "deleteUser" class = "waves-effect waves-green btn-flat">
+                    Aceptar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

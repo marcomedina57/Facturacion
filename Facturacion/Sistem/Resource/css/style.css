@@ -1,0 +1,54 @@
+.btn-floating {
+    background: url(../images/iconos/ic_reorder_whites.png) no-repeat;
+}
+
+.Message {
+    color: brown;
+}
+
+.side-nav {
+    top: 0;
+    margin: 0;
+    height: calc(100% + 60px);
+    background-color: #fff;
+    overflow-y:auto;
+    will-change:transform;
+}
+@media(max-width: 1024px)
+{
+    .side-nav {
+        display: none;
+    }
+
+    .container2 {
+        margin: 10px 10px 0px;
+        margin-left: 20px;
+        width: 60%;
+    }
+}
+@media(min-width: 800px){
+    .side-nav {
+        max-width: 30%;
+    }
+    .side-nav {
+        max-width: 20%;
+        display:block;
+    }
+
+    .container2 {
+        width: 100%;
+        margin: -270px 290px 0px;
+    }
+}
+
+
+.login {
+    width: 60%;
+    margin: auto;
+}
+
+.rowin {
+    width: 90%;
+}
+
+

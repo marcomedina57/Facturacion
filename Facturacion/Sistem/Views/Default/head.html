@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturacion</title>
+    <script src="http://localhost:84/facturacion/Sistem/Resource/js/jquery-3.4.1.min.js"></script>
+
+    <script src="http://localhost:84/facturacion/Sistem/Resource/materialize/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="http://localhost:84/facturacion/Sistem/Resource/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="http://localhost:84/facturacion/Sistem/Resource/css/style.css">
+   
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper cyan darken-2">
+            <a href="#!" class="brand-logo center">
+                <i class="material-icons">
+                    Sistema de facturacion
+                </i>
+
+            </a>
+            <div id="menuNavbar1">
+                <ul class = "right hide-on-med-and-down">
+                    <li>
+                        <a href="http://localhost:84/facturacion/Sistem/Usuarios/destroySession" onclick = "sessionClose();">
+                            Salir
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" id = "buttonMenu" data-target="slide-out" class = "btn-floating btn-large waves-effect waves-light cyan darken-2 sidenav-trigger">
+
+                </a>
+            </div>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view cyan darken-2">
+                
+                <output id="fotoUser2"></output>
+                <p class = "white-text"id="name1">
+
+                </p>
+                <p class = "white-text" id="role1"></p>    
+
+
+            </div>
+        </li>
+        <li>
+            <a href="http://localhost:84/facturacion/Sistem/Principal/principal" onclick="">Inicio</a>
+        </li>
+        <li>
+            <a href="http://localhost:84/facturacion/Sistem/Usuarios/usuarios" onclick = "">
+                Usuarios
+            </a>
+        </li>
+        <li>
+            <a href="http://localhost:84/facturacion/Sistem/Usuarios/destroySession" onclick = "sessionClose();">
+                Salir
+            </a>
+        </li>
+
+    </ul>
+
+    <div id="menuNavbar2">
+        <div id="main">
+            <div class="wrapper">
+                <aside id="left-sidebar-nav"> 
+                    <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                        <li class="user-details cyan darken-2">
+                            <div class="row">
+                            <div class="col s5 m4 l6">
+                                <output id="fotoUser"></output>
+                              
+                            </div>
+                            <div class="col s8 m8 l8">
+                                <p class="white-text" id="name2"></p>
+                                <p class="white-text" id="role2"></p>
+                                    
+                            </div>
+                        </div>
+
+                        </li>
+
+                        <div class="collection">
+                            <a href="http://localhost:84/facturacion/Sistem/Principal/principal" class = "collection-item" onclick = "" id = "enlace1">Inicio</a>
+
+                            <a href="http://localhost:84/facturacion/Sistem/Usuarios/usuarios" class = "collection-item" onclick = "" id="enlace2">Usuarios</a>
+                        </div>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
